@@ -1,0 +1,441 @@
+ body {
+ body {
+ 	background: 
+ 	max-width: 980px;
+ 	margin: 0 auto;
+	
+ }
+
+
+.row{
+	
+	margin: 0 auto;
+	background:;
+ 	max-width: 980px;
+	
+}
+
+.header {
+/*
+	    display: flex;
+    justify-content: center;
+    background: #506e9e;
+    height: 15%;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    opacity: 0.9;
+*/
+}
+
+.main_content {
+
+/*
+	display: flex;
+	justify-content: center; 
+	align-content: center;
+	background:#28374f;
+	font-size: 200px;
+   height: 1800px;
+	align-items: center;
+*/
+	
+	
+
+}
+
+
+.footer {
+/*
+	height: 15%;
+	background: #506e9e;
+	position: fixed;
+    bottom: 0;
+	width: 100%;
+	opacity: 0.9;
+*/
+	
+}
+
+.calendar {
+   
+/*
+	height: 226px;
+    width: 260px;
+*/  
+/*
+    background: #B9C5D8;
+    border-radius: 40px;
+    box-shadow: 5px 5px 1px black;
+    padding: 17px 17px 1px 17px;
+    opacity: 0.8;
+*/
+
+	
+}
+
+
+.calendar:active,.map:active,.team:active,.chat:active, .info:active {
+/*
+  background-color: #3e8e41;
+  box-shadow: 5px 5px 1px black;
+  transform: translateY(4px);
+*/
+}
+
+
+
+
+
+.outer-calendar {
+/*
+	
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	
+	
+    padding-top: 200px;
+	display: flex;
+	justify-content:center;
+	padding-right: 47px;
+
+*/
+
+	
+}
+
+
+
+.map {
+/*
+	background: #B9C5D8;
+	height: 226px;
+    width: 260px;
+	margin-right: 40px;
+    padding: 17px 7px 35px 11px;
+	box-shadow: 5px 5px 1px black;
+    border-radius: 40px;
+    padding-top: 15px;
+	margin-top: 100px;
+    padding: 17px 18px 48px 22px;
+    opacity: 0.8;
+*/
+
+
+}
+
+.outer-map {
+
+/*	padding-top:10px;*/
+	/*
+	
+	display: flex;
+	justify-content:center;
+	padding-left: 50px;
+*/
+	
+}
+
+.outer-team {
+/*   padding-top: 20px;*/
+	
+	/*
+	display:flex;
+	justify-content: center;
+    padding-top: 120px;
+    padding-left: 36px;
+*/
+ }
+
+.team {
+    
+/*
+	background: #B9C5D8;
+	height: 226px;
+    width: 260px;
+	padding: 17px 18px 48px 22px;
+	box-shadow: 5px 5px 1px black;
+	border-radius: 40px;
+    opacity: 0.8;
+*/
+
+
+	
+}
+
+.logo {
+	
+	
+}
+
+.chat {
+/*
+    background: #B9C5D8;
+	height: 125px;
+    width: 125x;
+    padding: 18px 21px 24px 21px;	
+	box-shadow: 5px 5px 1px black; 
+	margin-left: 30px;
+    margin-top: -21px;
+	border-radius: 40px;
+*/
+
+}
+
+.chat-outer {
+}
+
+.footer_icons {
+/*
+	display: flex;
+	justify-content: space-between;
+	padding-top: 75px;
+*/
+}
+
+.info {
+/*
+	background: #B9C5D8;
+	height: 125px;
+    width: 125x;
+    padding: 18px 21px 24px 21px;	
+	box-shadow: 5px 5px 1px black; 
+	margin-right:20px;
+    margin-top: -21px;
+    border-radius: 40px;
+*/
+
+	
+}
+
+.main_page {
+    
+opacity: }
+
+.games_schedule {
+	
+	background: #28374f;
+	
+}
+
+.game1 {
+	padding-top: 100px;
+	display: flex;
+	padding-left:180px;
+	
+}
+
+.inner-game {
+	height: 256px;
+    width: 208px;
+    box-shadow: 5px 5px 1px black;
+    border-radius: 40px;
+	background: #B9C5D8;
+}
+
+.book_cover {
+    padding-left: 25px;
+    padding-top: 20px;
+	
+}
+
+.inner-guest {
+	height: 256px;
+    width: 208px;
+	margin-left: 120px;
+	box-shadow: 5px 5px 1px black;
+    border-radius: 40px;
+	background: #B9C5D8;
+}
+
+.against {
+	font-size: 100px;
+}
+
+.game-name {
+	box-shadow: 5px 5px 20px 20px black;
+    /* border-radius: 40px; */
+    background: #4a4e56;
+    text-align: center;
+    color: white;
+	
+}
+
+.outer-game {
+	    padding-top: 50px;
+}
+
+.outer-against {
+	padding-top: 40px;
+}
+
+.game-date {
+	    box-shadow: 5px 5px 1px 1px black;
+    /* border-radius: 40px; */
+    background: #4a4e56;
+    text-align: center;
+    color: white;
+	font-size: 50px;
+}
+
+.dates {
+	    margin-top: 47px;
+
+}
+
+
+
+#main_page {
+	display: none;
+}
+
+.background {
+/*	height: 0px;*/
+	display: none;
+}
+
+.outer-background {
+/*	margin-top: -27px;*/
+}
+
+.outer{
+/*
+	display:flex; 
+	flex-direction: column;
+*/
+}
+
+.logo_image{
+	
+}
+/*
+@media only screen 
+and (min-device-width : 375px) 
+and (max-device-width : 812px) 
+and (-webkit-device-pixel-ratio : 3)
+and (orientation : landscape) { 
+     
+	
+	.outer{
+		color: #889CBD;
+		
+		
+	}
+*/
+	
+/*	.background{*/
+/*
+		display: ;
+		
+	}
+	
+	.logo_outer{
+		height: 5px;
+	}
+
+	.footer{
+		
+	}
+	
+	.header{
+		
+*/
+/*
+	}
+	
+	.image{
+    width: 1111px;
+    height: 516px;
+	}
+	
+	.main_content{
+    padding-top: 24px;
+	height: 0;
+	}
+	
+	.outer-calendar{
+		
+	}
+	
+	.outer{
+		display: flex;
+	}
+	.calendar{
+		    width: 101px;
+		    height: 144px;
+	}
+	.calendar-image{
+		height: 100px;
+		
+	}
+	.outer-calendar{
+	justify-content:flex-start;
+    padding-top: 85px;
+	}
+	.map-image{
+		    height: 150px;
+    width: 150px;
+*/
+/*	}*/
+	
+/*
+	.map{
+		height: 150px;
+    width: 152px;
+	}
+	.team-image{
+    height: 150px;
+    width: 137px;
+	}
+	.team{
+	height: 160px;
+    width: 137px;
+    padding-top: 0px;
+	}
+	.outer-team{
+    padding-top: 108px;
+    padding-left: 164px;	}
+}
+*/
+
+.logo_image {
+	
+}
+
+.team-image {
+	
+}
+
+.container {
+
+}
+
+.calendar-image {
+width: auto;
+}
+
+
+.outer-map {
+    
+}
+
+#sched {
+	
+}
+
+.games_schedule {
+	
+}
+
+#sched {
+	
+}
+
+.game_size {
+	
+}
+
+.monoaekre {
+	
+}
