@@ -1,0 +1,686 @@
+body {
+
+	margin: 0 auto;
+	height: auto;
+	background: #28374f;
+	height: 100%;
+}
+
+.background {
+	background-image:
+		url('icons/background1.jpg');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+
+.header {
+	display: flex;
+	height: 20vh;
+	width: 100%;
+	background: #506e9e;
+	justify-content: center;
+	align-items: center;
+	opacity: 0.8;
+	position: fixed;
+	top: 0;
+	z-index: 1;
+}
+
+.calendar,
+.map,
+.team {
+	width: 80%;
+	height: auto;
+	padding: 30px;
+}
+
+.outer {
+	height: 98vh;
+	display: flex;
+	justify-content: center;
+
+	align-items: center;
+	padding: 10px;
+}
+
+.cal_sha,
+.map_sha,
+.team_sha {
+	width: 80%;
+	height: auto;
+	margin: 10px;
+	background-color: red;
+	box-shadow: 5px 5px 1px black;
+	background: #B9C5D8;
+	opacity: 0.9;
+	border-radius: 50px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.cal_sha:active,
+.map_sha:active,
+.team_sha:active {
+
+	background-color: #3e8e41;
+	box-shadow: 5px 5px 1px black;
+	transform: translateY(4px);
+	border-radius: 50px;
+}
+
+.outer-map {
+	padding: 90px;
+}
+
+.footer {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	height: 20vh;
+	width: 100%;
+	background: #506e9e;
+	opacity: 0.8;
+	position: fixed;
+	position: fixed;
+	bottom: 0;
+	z-index: 1;
+}
+
+.home-sha,
+.chat_sha,
+.info_sha {
+	display: flex;
+	align-items: center;
+	align-content: center width: 80%;
+	height: auto;
+	margin: 10px;
+	background-color: red;
+	box-shadow: 5px 5px 1px black;
+	background: #B9C5D8;
+	opacity: 0.9;
+	border-radius: 12px;
+
+}
+
+.home-sha:active,
+.chat_sha:active,
+.info_sha:active {
+
+	background-color: #3e8e41;
+	box-shadow: 5px 5px 1px black;
+	transform: translateY(4px);
+	border-radius: 12px;
+}
+
+.logo {
+
+	width: auto;
+	height: 75%;
+}
+
+.home,
+.chat,
+.info {
+
+	width: 90%;
+	height: auto;
+	margin: 5px;
+}
+
+.game-name {
+	display: flex;
+	justify-content: center;
+	font-size: 250%;
+	color: white;
+	background: grey;
+	opacity: 0.9;
+	box-shadow: 10px 5px black;
+	margin-top: 27px;
+}
+
+.schedule {
+	background-color: #202c3f;
+	height: 100vh;
+	/*display: none;*/
+}
+
+.outer-date,
+.location {
+	display: flex;
+	justify-content: center;
+	font-size: 200%;
+	color: white;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+.game1 {
+	display: flex;
+	justify-content: space-evenly;
+}
+
+.outer_filter {
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+	padding: 10px;
+
+}
+
+.game_size {
+	height: 60vh;
+	top: 21vh;
+	position: relative;
+}
+
+.team_buttons {
+	position: relative;
+}
+
+.buttons {
+	background-color: #B9C5D8;
+	border: none;
+	color: black;
+	text-align: center;
+	text-decoration: none;
+	margin: 4px 2px;
+	cursor: pointer;
+	border-radius: 8px;
+	height: 5%;
+	width: 50%;
+	opacity: 0.9;
+	box-shadow: 5px 10px black;
+	font-size: 20px;
+	margin-top: 20px;
+	display: flex;
+	justify-content: center;
+}
+
+.buttons:active {
+	background-color: #3e8e41;
+	box-shadow: 5px 5px 1px black;
+	transform: translateY(4px);
+	border-radius: 12px;
+}
+
+.outer-select {
+	height: 60vh;
+	display: flex;
+	justify-content: ;
+	justify-content: flex-end;
+	flex-direction: column;
+	align-items: center;
+}
+
+.iframe {
+	height: 556px;
+	width: 100%;
+	font-size: 20px;
+	margin-top: 10px;
+	margin-bottom: 25px;
+}
+
+.message {
+	border: 1px solid black;
+	padding: 5px;
+	margin: 5px;
+	background-color: lightgoldenrodyellow;
+	border-radius: 10px;
+	opacity: 0.8;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.myMessage {
+	border: 1px solid black;
+	padding: 5px;
+	margin: 5px;
+	background-color: rgb(210, 250, 220);
+	border-radius: 10px;
+	opacity: 0.8;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#posts {
+	overflow: scroll;
+	margin-bottom: 20px;
+	display: flex;
+	flex-direction: column;
+	background: white;
+	/* border-radius: 10px; */
+	position: fixed;
+	width: 99%;
+	height: 47%;
+	top: 24%;
+}
+
+.advice {
+	position: fixed;
+	width: 100%;
+	height: 52%;
+	top: 24%;
+	overflow: scroll;
+	margin-bottom: 20px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background-color: grey;
+	color: white;
+	opacity: .7;
+	border-radius: 10px;
+	font-size: 35px;
+}
+
+.chat-page,
+.chat-page_1 {
+	height: 400px;
+}
+
+.container {
+	height: 75vh;
+}
+
+.container_1 {
+	height: 69vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.inputs {
+	display: flex;
+	justify-content: space-around;
+	position: fixed;
+	bottom: 23%;
+	width: 100%;
+}
+
+input {
+	margin-right: 15px;
+	width: 80%;
+	font-size: 40px;
+	border: solid;
+}
+
+.notification:not(:last-child) {
+	margin-bottom: .3rem;
+}
+
+.notification.is-info {
+	text-align: right;
+	max-width: 80%;
+	background: lightblue;
+	align-self: flex-end;
+	border-radius: 20px;
+	width: 50%;
+	padding: 10px;
+	font-size: 30px;
+	word-wrap: break-word;
+}
+
+.notification.is-primary {
+	text-align: left;
+	width: 50%;
+	border-color: black;
+	max-width: 80%;
+	align-self: flex-start;
+	border-radius: 20px;
+	padding: 10px;
+	font-size: 30px;
+	word-wrap: break-word;
+	background-color: gray;
+}
+
+.name {
+
+	font-size: 28px;
+	font-weight: bold;
+	color: black;
+}
+
+.is-primary {
+	font-size: 30px;
+	border: solid;
+}
+
+#login {
+
+	font-size: 60px;
+}
+
+/*CHAT*/
+@media only screen and (min-device-width : 375px) and (max-device-width : 667px) {
+
+	.home-sha,
+	.chat_sha,
+	.info_sha {
+		display: flex;
+		justify-content: center;
+	}
+
+	.home,
+	.chat,
+	.info {
+		width: 60%;
+		height: auto;
+		margin: 5px;
+	}
+
+	.outer-select {
+		padding-top: 110px;
+	}
+
+	input {
+		font-size: 15px;
+		border: solid;
+	}
+
+	.is-primary {
+		font-size: 19px;
+		border: solid;
+	}
+
+}
+
+@media only screen and (min-device-width : 375px) and (max-device-width : 812px) and (-webkit-device-pixel-ratio : 3) and (orientation : landscape) {
+
+	.header {
+		height: 15vh;
+	}
+
+	.outer-select {
+		padding-top: 95px;
+	}
+
+	.outer {
+		flex-direction: row;
+	}
+
+	.cal_sha:active,
+	.map_sha:active,
+	.team_sha:active {
+		background-color: #3e8e41;
+		box-shadow: 5px 5px 1px black;
+		transform: translateY(4px);
+		border-radius: 50px;
+	}
+
+	.cal_sha,
+	.map_sha,
+	.team_sha {
+		padding-right: 0px;
+		padding-left: -3px;
+		height: auto;
+		margin: 10px;
+		background-color: red;
+		box-shadow: 5px 5px 1px black;
+		background: #B9C5D8;
+		opacity: 0.9;
+		border-radius: 50px;
+	}
+
+	.calendar,
+	.map,
+	.team {
+		margin-left: 12px;
+		width: 60%;
+		height: auto;
+	}
+
+	.home,
+	.chat,
+	.info {
+		width: 35%;
+		height: auto;
+		margin: 5px;
+	}
+
+	.home-sha,
+	.chat_sha,
+	.info_sha {
+		display: flex;
+		align-items: center;
+		align-content: center width: 80%;
+		justify-content: end;
+		/* height: auto; */
+		/* margin: 10px; */
+		/* background-color: red; */
+		box-shadow: 5px 5px 1px black;
+		background: #B9C5D8;
+		opacity: 0.9;
+		border-radius: 12px;
+		padding-left: 68px;
+	}
+
+	.game-name {
+		margin-top: 50px;
+		font-size: 30px;
+	}
+
+	.labels {
+		width: 8%;
+		height: 0%;
+	}
+
+	.game1 {
+		padding-top: 25px;
+	}
+
+	.buttons {
+		font-size: 20px;
+		margin-top: 10px;
+	}
+
+	.game_size {
+		top: 10vh
+	}
+
+	.advice {
+top:23%	}
+
+	.container {
+		height: 127vh;
+	}
+
+	#posts {
+		height: 43%;
+		top: 20%;
+	}
+
+	.container_1 {
+		height: 127vh;
+	}
+
+	.notification.is-info {
+		font-size: 12px;
+		width: 30%;
+	}
+
+	.notification.is-primary {
+		font-size: 12px;
+		width: 30%;
+	}
+
+	.name {
+		font-size: 10px;
+	}
+
+}
+
+@media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 2) and (min-resolution: 192dpi) {
+
+
+	.outer-select {
+		padding-top: 136px;
+	}
+
+	.outer-map {
+		padding: 0px;
+	}
+
+	.cal_sha,
+	.map_sha,
+	.team_sha {
+		display: flex;
+		justify-content: center;
+	}
+
+	.calendar,
+	.map,
+	.team {
+		width: 50%;
+		height: 10%;
+	}
+
+	.home-sha,
+	.chat_sha,
+	.info_sha {
+		display: flex;
+		justify-content: center;
+	}
+
+	.home,
+	.chat,
+	.info {
+		width: 60%;
+	}
+
+	.buttons {
+		display: flex;
+		justify-content: center;
+		margin: 0;
+	}
+
+	.container {
+		height: 100vh;
+	}
+
+	#posts {
+		top: 20%;
+	}
+
+	.container_1 {
+		height: 100vh;
+	}
+
+	.notification.is-info {
+		font-size: 15px;
+		margin-right: 10px;
+	}
+
+	.notification.is-primary {
+		font-size: 15px;
+		margin-left: 10px;
+	}
+
+	.name {
+		font-size: 16px;
+	}
+}
+
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+	.outer-select {
+		padding-top: 105px;
+	}
+
+	.iframe {
+		padding-top: 10px;
+	}
+
+	.outer {
+		flex-direction: row;
+	}
+
+	.buttons {
+		font-size: 20px;
+		margin-top: 14px;
+	}
+
+	input {
+		height: 100%;
+		font-size: 18px;
+	}
+
+	.is-primary {
+		font-size: 16px;
+		border: solid;
+	}
+}
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 568px) and (orientation : landscape) {
+	.outer-select {
+		padding-top: 121px;
+	}
+
+	.outer {
+		flex-direction: row;
+	}
+
+	.home,
+	.chat,
+	.info {
+		width: 60%;
+		height: auto;
+		margin: 5px;
+	}
+
+	.buttons {
+		font-size: 20px;
+		margin-top: 10px;
+	}
+}
+
+@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
+	.outer-select {
+		padding-top: 150px;
+	}
+
+	.outer {
+		flex-direction: row;
+	}
+
+	.buttons {
+		font-size: 20px;
+		margin-top: 20px;
+	}
+
+	#posts {
+		height: 42%;
+	}
+}
+
+
+@media (min-width: 1281px) {
+	.outer-select {
+		padding-top: 210px;
+	}
+
+	.outer {
+		flex-direction: row;
+	}
+
+	.buttons {
+		font-size: 40px;
+		margin-top: 20px;
+	}
+	
+
+	@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
+		.outer {
+			flex-direction: row;
+		}
+
+		#posts {
+			top: 20%;
+		}
+
+		.buttons {
+			font-size: 40px;
+			margin-top: 20px;
+		}
+	}

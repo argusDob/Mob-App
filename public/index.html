@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>NYSL</title>
+
+	<!--	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css">-->
+	<link rel="stylesheet" type="text/css" href="main2.css">
+
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+</head>
+
+<body>
+	<div id="app">
+		<div class="main_page" id="main" v-if="data_loaded && path == 0">
+			<div class="background">
+				<div class="header">
+					<img :src="data.icons.logo" alt="" class="logo">
+				</div>
+				<div class="outer">
+					<div class="outer-calendar">
+						<div class="cal_sha" id="cal">
+							<img :src="data.
+							icons.calendar" v-on:click="switchDiv" class="calendar" alt="">
+						</div>
+					</div>
+					<div class="outer-map">
+						<div class="map_sha">
+							<img :src="data.icons.map" class="map" alt="" @click="location">
+						</div>
+					</div>
+					<div class="outer-team">
+						<div class="team_sha">
+							<img :src="data.icons.team" class="team" alt="" @click="team">
+						</div>
+					</div>
+				</div>
+
+				<div class="footer">
+					<div class="outer-chat">
+						<div class="chat_sha">
+							<img :src="data.icons.chat" class="chat" @click="loginPage" alt="">
+						</div>
+					</div>
+
+					<div class="outer-home">
+						<div class="home-sha">
+							<img :src="data.icons.home" class="home" alt="">
+						</div>
+					</div>
+
+					<div class="outer-info">
+						<div class="info_sha">
+							<img :src="data.icons.info" class="info" alt="">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+
+
+
+
+		<div class="schedule" id="sched" v-if="data_loaded && path == 1">
+			<div class="header">
+				<img :src="data.icons.logo" alt="" class="logo">
+			</div>
+			<div class="game_size">
+				<div v-for="(value,index) in games" class="games_schedule" id="">
+					<div class="main_s">
+						<div class="game-name">
+							<div class="against">
+								{{value.host}} vs {{value.guest}}
+							</div>
+						</div>
+
+						<div class="outer-date">
+							<div class="dates">
+								{{value.Date}} {{value.Month}} {{value.Time}}
+							</div>
+						</div>
+						<div class="location">
+							<div class="iner-loc">
+								{{value.Location}}
+							</div>
+						</div>
+						<div class="game1">
+							<img v-bind:src="teams[value.host].url" class="labels">
+							<img v-bind:src="teams[value.guest].url" class="labels">
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="footer">
+				<div class="outer-chat">
+					<div class="chat_sha">
+						<img :src="data.icons.chat" class="chat" @click="loginPage" alt="">
+					</div>
+				</div>
+
+				<div class="outer-home">
+					<div class="home-sha">
+						<img :src="data.icons.home" class="home" @click="home" alt="">
+					</div>
+				</div>
+
+				<div class="outer-info">
+					<div class="info_sha">
+						<img :src="data.icons.info" class="info" alt="">
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="" id="" v-if="data_loaded  && path == 2">
+			<div class="header">
+				<img :src="data.icons.logo" alt="" class="logo">
+			</div>
+			<div class="outer_filter">
+				<button v-for="(value,index) in teams" class="buttons" value="index" @click="handler(index)">
+					{{ teams[index].name }}
+				</button>
+			</div>
+			<div v-for="(value,index) in tempData" class="test">
+				{{value.host}} {{value.guest}}
+			</div>
+			<div class="footer">
+				<div class="outer-chat">
+					<div class="chat_sha">
+						<img :src="data.icons.chat" class="chat" @click="loginPage" alt="">
+					</div>
+				</div>
+
+				<div class="outer-home">
+					<div class="home-sha">
+						<img :src="data.icons.home" class="home" @click="home" alt="">
+					</div>
+				</div>
+				<div class="outer-info">
+					<div class="info_sha">
+						<img :src="data.icons.info" class="info" alt="">
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="" id="" v-if="data_loaded & path == 3">
+			<div class="header">
+				<img :src="data.icons.logo" alt="" class="logo">
+			</div>
+
+			<div class="game_size">
+				<div v-for="(value,index) in tempData" class="games_schedule" id="">
+
+					<div class="main_s">
+						<div class="game-name">
+							<div class="against">
+								{{value.host}} vs {{value.guest}}
+							</div>
+						</div>
+						<div class="outer-date">
+							<div class="dates">
+								{{value.Date}} {{value.Month}} {{value.Time}}
+							</div>
+						</div>
+						<div class="location">
+							<div class="iner-loc">
+								{{value.Location}}
+							</div>
+						</div>
+						<div class="game1">
+							<img v-bind:src="teams[value.host].url" class="labels">
+							<img v-bind:src="teams[value.guest].url" class="labels">
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="footer">
+				<div class="outer-chat">
+					<div class="chat_sha">
+						<img :src="data.icons.chat" class="chat" alt="" @click="loginPage">
+					</div>
+				</div>
+
+				<div class="outer-home">
+					<div class="home-sha">
+						<img :src="data.icons.home" class="home" @click="home" alt="">
+					</div>
+				</div>
+
+
+				<div class="outer-info">
+					<div class="info_sha">
+						<img :src="data.icons.info" class="info" alt="">
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="monoaekre" id="" v-if="data_loaded & path == 4">
+
+
+			<div class="header">
+				<img :src="data.icons.logo" alt="" class="logo">
+			</div>
+
+
+			<div class="outer-select">
+
+				<div class=outer-sel>
+					<select class="select-menu" id="dropdown" v-on:change="filteredLocs()" style="border: 10px;">
+
+						<option value="">NONE</option>
+						<option v-for="(value,index) in locations" v-bind:value="value"> {{value}}</option>
+					</select>
+				</div>
+
+
+				Mobile Application<iframe class="iframe" v-bind:src="iframe" id="iframe"></iframe>
+			</div>
+
+
+			<div class="footer">
+				<div class="outer-chat">
+					<div class="chat_sha">
+						<img :src="data.icons.chat" class="chat" alt="" @click="loginPage">
+					</div>
+				</div>
+
+
+
+				<div class="outer-home">
+					<div class="home-sha">
+						<img :src="data.icons.home" class="home" @click="home" alt="">
+					</div>
+				</div>
+
+
+				<div class="outer-info">
+					<div class="info_sha">
+						<img :src="data.icons.info" class="info" alt="">
+					</div>
+				</div>
+			</div>
+
+		</div>
+		<div class="log-in" v-if="data_loaded && path == 5">
+			<div class="header">
+				<img :src="data.icons.logo" alt="" class="logo"></div>
+			<div class="container">
+				<div class="chat-page">
+					<div class="advice">
+						You must to be logged
+						<button id="login" @click="handler1" class="button is-info">Login!</button>
+					</div>
+				</div>
+			</div>
+			<div class="footer">
+				<div class="outer-chat">
+					<div class="chat_sha">
+						<img :src="data.icons.chat" class="chat" alt="" @click="loginPage">
+					</div>
+				</div>
+				<div class="outer-home">
+					<div class="home-sha">
+						<img :src="data.icons.home" class="home" @click="home" alt="">
+					</div>
+				</div>
+				<div class="outer-info">
+					<div class="info_sha">
+						<img :src="data.icons.info" class="info" alt="">
+					</div>
+				</div>
+			</div>
+
+		</div>
+		<div class="chat-box" v-if="data_loaded && path == 6">
+			<div class="header">
+				<img :src="data.icons.logo" alt="" class="logo"></div>
+
+			<div class="container_1">
+				<!--	<div class="chat-page_1">-->
+				<div id="posts" class="box">
+					Loading posts...
+				</div>
+			</div>
+			<div class="inputs">
+				<input id="textInput" @keyup.enter="trigger" class="input" type="text" placeholder="Your message...">
+				<button id="create-post" @click="writeNewPost" class="button is-primary" ref="sendReply">Send</button>
+				<button id="" @click="handler2" class="button is-primary">sign out</button>
+			</div>
+			<div class="footer">
+				<div class="outer-chat">
+					<div class="chat_sha">
+						<img :src="data.icons.chat" class="chat" alt="" @click="loginPage">
+					</div>
+				</div>
+
+				<div class="outer-home">
+					<div class="home-sha">
+						<img :src="data.icons.home" @click="home" class="home" alt="">
+					</div>
+				</div>
+
+				<div class="outer-info">
+					<div class="info_sha">
+						<img :src="data.icons.info" class="info" alt="">
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="https://www.gstatic.com/firebasejs/5.7.0/firebase.js"></script>
+	<script>
+		// Initialize Firebase
+		var config = {
+			apiKey: "AIzaSyDR05wpQPRKdeIS_Yu-MgmNuFqgm6W6S7A",
+			authDomain: "mobile-application-edb28.firebaseapp.com",
+			databaseURL: "https://mobile-application-edb28.firebaseio.com",
+			projectId: "mobile-application-edb28",
+			storageBucket: "mobile-application-edb28.appspot.com",
+			messagingSenderId: "749523902311"
+		};
+		firebase.initializeApp(config);
+
+	</script>
+	<script src="https://unpkg.com/vue/dist/vue.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="main.js"></script>
+	<!--	<script src="main.js"></script>-->
+</body>
+
+</html>
